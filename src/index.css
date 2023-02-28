@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  background-color: rgb(77, 126, 126);
+  color: white;
+  padding: 10px;
+}
+
+h1 {
+  margin: 20px 0;
+  padding: 0;
+}
+
+.content {
+  min-height: 100vh;
+  display: flex;
+  gap: 10px;
+}
+
+.container {
+  box-shadow: 0 0 4px 0 white;
+  border-radius: 5px;
+  background-color: rgb(95, 151, 151);
+  max-height: 400px;
+  overflow: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.posts {
+  flex: 1;
+}
+
+.todos {
+  flex: 2;
+}
+
+.new-post-form {
+  display: flex;
+  background-color: rgb(77, 126, 126);
+  position: sticky;
+  top: 0;
+}
+
+.new-post-input {
+  flex: 1;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: transparent;
+  padding-left: 10px;
+  background-color: rgb(51, 124, 124);
+  box-shadow: 0 0 2px 0 white;
+}
+
+.new-post-input::placeholder {
+  color: white;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  outline: none;
+  box-shadow: 0 0 2px 0 white;
+  flex: 1;
+  border-radius: 4px;
+}
+
+input:focus {
+  border: 3px solid teal;
+}
+
+.new-post-submit {
+  background-color: rgb(26, 48, 85);
+}
+
+.new-post-submit:hover {
+  background-color: rgb(13, 166, 166);
+}
+
+.red {
+  background-color: rgb(132, 1, 84);
+}
+
+.red:hover {
+  background-color: rgb(244, 17, 134);
+}
+
+.delete-all-posts {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  outline: none;
+  box-shadow: 0 0 2px 0 white;
+  border-radius: 4px;
+}
+
+.rows {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 3px;
+}
+
+.text {
+  flex: 5;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.center-posts-text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.touchable {
+  cursor: pointer;
+}
+
+.todos-buttons {
+  display: flex;
+  position: sticky;
+  bottom: 0;
+}
+
+.save {
+  background-color: rgb(26, 48, 85);
+}
+
+@media screen and (max-width: 800px) {
+  .todos {
+    flex: 1;
+  }
+}
+@media screen and (max-width: 524px) {
+  .content {
+    flex-direction: column;
+    padding-bottom: 30px;
+    gap: 30px;
+  }
+  h1 {
+    text-align: center;
+  }
+}
